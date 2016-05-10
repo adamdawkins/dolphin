@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Cover = () => (
+const Cover = ({forName, forRole, forCompanyName, title, version, client }) => (
   <div>
   <div className="cover">
     <div className="addresses" style={{display: 'block', overflow: 'hidden',}}>
       <div className="address address--to">
-        For: Beth Francis,<br/>
-        Head of Marketing,<br/>
-        Sabre Retail Limited t/a Mint Velvet
+        For: {forName}<br/>
+        {forRole ? (<span>Head of Marketing,<br/></span>) : null}
+        {forCompanyName}
       </div>
       <div className="address address--from">
         The Dragon Drop Development Company,<br/>
@@ -19,29 +19,8 @@ const Cover = () => (
     </div>
     <h1 className="cover__jumbo">Proposal</h1>
     <div className="cover__title">
-      <h4 className="h4">Checkout Recovery for Mint Velvet</h4>
-    </div>
-    <div className="cover__details">
-      <div className="cover-detail">
-        <h5 className="cover-detail__heading">Prepared for:</h5>
-        <p className="cover-detail__content">
-          Beth Francis,<br/>
-          Stewart Grant
-        </p>
-      </div>
-      <div className="cover-detail">
-        <h5 className="cover-detail__heading">Prepared by:</h5>
-        <p className="cover-detail__content">
-          Jonathan Bowen,<br/>
-          Adam Dawkins
-        </p>
-      </div>
-      <div className="cover-detail">
-        <h5 className="cover-detail__heading">Issued on:</h5>
-        <p className="cover-detail__content">
-          25th January 2016,
-        </p>
-      </div>
+      <h4 className="h4">{title}<br/>for {client}</h4>
+      <span style={{color: 'rgba(0,0,0,.44)'}}>v{version}</span>
     </div>
   </div>
   <div style={{color: 'rgba(0,0,0,.44)', textAlign: 'center', fontFamily: 'Georgia, serif', padding: 20}}>
