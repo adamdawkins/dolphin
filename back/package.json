@@ -1,0 +1,41 @@
+{
+  "name": "dolphin",
+  "version": "0.3.0",
+  "description": "dolphin",
+  "scripts": {
+    "start": "export MONGO_URL=mongodb://proposals_dev:author-penology-realize@aws-us-east-1-portal.17.dblayer.com:10116/proposals-dev; meteor --port 3000 --settings settings.json",
+    "test": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/reponame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mantra-core": "^1.2.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-komposer": "^1.3.0",
+    "react-mounter": "^1.0.0",
+    "react-simple-di": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.x.x",
+    "babel-plugin-react-require": "2.x.x",
+    "babel-polyfill": "6.x.x",
+    "babel-preset-es2015": "6.x.x",
+    "babel-preset-react": "6.x.x",
+    "babel-preset-stage-2": "6.x.x",
+    "babel-root-slash-import": "1.x.x",
+    "chai": "3.x.x",
+    "enzyme": "^2.2.0",
+    "eslint": "2.7.x",
+    "eslint-plugin-react": "4.3.x",
+    "jsdom": "^8.0.4",
+    "mocha": "2.x.x",
+    "react-addons-test-utils": "^15.0.0",
+    "react-mdl": "^1.5.4",
+    "sinon": "1.17.x"
+  }
+}
