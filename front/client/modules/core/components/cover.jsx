@@ -5,8 +5,8 @@ const Cover = ({forName, forRole, forCompanyName, title, version, client }) => (
   <div className="cover">
     <div className="addresses" style={{display: 'block', overflow: 'hidden',}}>
       <div className="address address--to">
-        For: {forName}<br/>
-        {forRole ? (<span>Head of Marketing,<br/></span>) : null}
+        For: {forName},<br/>
+        {forRole ? (<span>{forRole},<br/></span>) : null}
         {forCompanyName}
       </div>
       <div className="address address--from">
