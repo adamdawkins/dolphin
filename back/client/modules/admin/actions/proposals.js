@@ -12,4 +12,13 @@ export default {
       }
     });
   },
+  delete( {Meteor, FlowRouter }, _id) {
+    Meteor.call('proposals.destroy', _id, (error) => {
+      if (error) {
+        console.error(error);
+      } else {
+        FlowRouter.go('/');
+      }
+    });
+  },
 };

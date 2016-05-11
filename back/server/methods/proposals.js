@@ -15,6 +15,10 @@ export default function () {
         updatedAt: new Date(),
         updatedBy: this.userId,
       });
-    }
+    },
+    'proposals.destroy'(_id) {
+      check(_id, String);
+      Proposals.remove({ _id });
+    },
   });
 }
