@@ -286,3 +286,35 @@ main {
   text-align: center;
   min-width: 15%;
 }
+
+.scroll-down {
+  color: rgba(0,0,0,.44);
+  text-align: center;
+  font-family: @serif;
+  padding: 20px;
+}
+
+
+@media print {
+ #header, .scroll-down {
+  display: none;
+ }
+
+ .cover {
+    box-shadow: none;
+ }
+
+ .h3, .h4, .p, .address {
+    color: black;
+  }
+
+  .p {
+    font-family: @sans-serif;
+  }
+    .section {
+      page-break-before: always;
+      &:after {
+        display: none;
+      }
+    }
+}

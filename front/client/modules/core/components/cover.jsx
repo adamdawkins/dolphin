@@ -23,7 +23,7 @@ const Cover = ({forName, forRole, forCompanyName, title, version, client }) => (
       <span style={{color: 'rgba(0,0,0,.44)'}}>v{version}</span>
     </div>
   </div>
-  <div style={{color: 'rgba(0,0,0,.44)', textAlign: 'center', fontFamily: 'Georgia, serif', padding: 20}}>
+  <div className="scroll-down">
     &darr; Scroll down to read the proposal &darr;
   </div>
   </div>
