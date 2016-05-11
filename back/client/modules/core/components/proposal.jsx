@@ -9,7 +9,7 @@ const Proposal = ({proposal, liveUrl}) => (
     >
       <FABButton
         colored
-        href={`${liveUrl}/proposals/${proposal._id}`}
+        href={`${liveUrl}/p/${proposal.slug}/${proposal._id}`}
         style={{
           position: 'absolute',
           top: 100,

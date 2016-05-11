@@ -16,7 +16,7 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
-  FlowRouter.route('/proposals/:_id', {
+  FlowRouter.route('/p/:slug/:_id', {
     name: 'proposal.show',
     action() {
       mount(MainLayoutCtx, {

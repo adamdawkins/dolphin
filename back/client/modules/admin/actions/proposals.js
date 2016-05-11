@@ -1,6 +1,15 @@
+import { Random } from 'meteor/random';
+
 export default {
-  create( { Collections, FlowRouter }, proposal) {
-    Collections.Proposals.insert(proposal);
-    FlowRouter.go('/');
+  create( { Meteor, FlowRouter }, options) {
+    const _id = Random.id(5);
+    const proposal = Object.assign({ _id }, options);
+    Meteor.call('proposals.create', proposal, (error) => {
+      if (error) {
+        console.error(error);
+      } else {
+        FlowRouter.go(`/preview/${_id}`);
+      }
+    });
   },
 };
