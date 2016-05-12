@@ -308,13 +308,14 @@ main {
     color: black;
   }
 
-  .p {
+  .p, .list, .list-item, .list-item__description, .list-item__title {
     font-family: @sans-serif;
   }
-    .section {
-      page-break-before: always;
-      &:after {
-        display: none;
-      }
+
+  .section {
+    page-break-before: always;
+    &:after {
+      display: none;
     }
+  }
 }
