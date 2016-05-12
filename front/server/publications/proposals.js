@@ -4,7 +4,6 @@ import {check} from 'meteor/check';
 
 export default function () {
   Meteor.publish('proposals', function (proposalsId) {
-    Meteor._sleepForMs(2000);
     return Proposals.find(proposalsId);
   });
 }
