@@ -1,6 +1,7 @@
 import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
 
 import Proposal from '../components/proposal.jsx';
+import MyLoading from '../components/my_loading.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections, FlowRouter} = context();
@@ -16,6 +17,6 @@ export const depsMapper = (context, actions) => ({
 });
 
 export default composeAll(
-  composeWithTracker(composer),
+  composeWithTracker(composer, MyLoading),
   useDeps(depsMapper)
 )(Proposal);
