@@ -13,7 +13,15 @@ DocHead.addMeta({
   name: 'viewport',
   content: 'width=device-width, initial-scale=1.0',
 });
-// init context
+
+const typeKitScript = 'https://use.typekit.net/lib8gaj.js';
+DocHead.loadScript(typeKitScript, function() {
+  try{Typekit.load({ async: true });}catch(e){console.error(e)}
+});
+
+
+https://use.typekit.net/lib8gaj.js
+//// init context
 const context = initContext();
 
 // create app
