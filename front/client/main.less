@@ -58,7 +58,8 @@ main {
 }
 
 .section {
-  max-width: 700px;
+  width: 700px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -303,7 +304,39 @@ main {
   padding: 20px;
 }
 
+@media (max-width: 480px) {
+  .cover {
+    &__jumbo {
+      font-size: 36px;
+    }
 
+  }
+  .title {
+    font-size: 18px;
+  }
+
+  .h4 {
+    font-size: 18px;
+  }
+
+  .h3 {
+    font-size: 24px;
+  }
+
+  .p {
+    font-size: 16px;
+  }
+  .address {
+    display: block;
+    float: none;
+    text-align: left;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+}
 @media print {
  #header, .scroll-down {
   display: none;
