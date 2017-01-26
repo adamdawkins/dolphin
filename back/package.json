@@ -4,7 +4,8 @@
   "description": "dolphin",
   "scripts": {
     "start": "export MONGO_URL=mongodb://proposals_dev:author-penology-realize@aws-us-east-1-portal.17.dblayer.com:10116/proposals-dev; meteor --port 3000 --settings settings.json",
-    "test": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register"
+    "test": "mocha .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
+    "deploy": "zsh ./.scripts/deploy-production.sh"
   },
   "repository": {
     "type": "git",

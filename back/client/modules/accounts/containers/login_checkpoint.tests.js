@@ -8,7 +8,8 @@ describe('accounts.containers.login_checkpoint', function () {
     it('passes a login object to onData', function () {
       const onData = spy();
       const Meteor = {
-        user: stub()
+        user: stub(),
+        loggingIn: spy(),
       };
       const context = () => ({ Meteor });
       composer({ context }, onData);
@@ -21,6 +22,7 @@ describe('accounts.containers.login_checkpoint', function () {
       const onData = spy();
       const Meteor = {
         user: () => ({_id: '123456790'}),
+        loggingIn: spy(),
       };
       const context = () => ({ Meteor });
       composer({ context }, onData);

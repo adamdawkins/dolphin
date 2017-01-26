@@ -1,0 +1,3 @@
+NODE_ENV=production
+ROOT_URL="http://dolphin.dragondrop.xyz"
+MONGO_URL="mongodb://dolphin:wove-thorp-foray@aws-us-east-1-portal.17.dblayer.com:10116/proposals"
